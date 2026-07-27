@@ -30,9 +30,12 @@ time, with the OS reinstalled in between and both tuned to their best:
 | Install, bare server to running panel | **79 s** | 410 s |
 | Uncacheable WooCommerce render | 189 ms | **168 ms** |
 
-That last row is the one it loses, and it stays on the page. The gap is the
-measured cost of running every site inside an `open_basedir` jail: 72 ms of a
-301 ms render, found by stracing a worker under load. The jail stays.
+That last row is the one it loses, and it stays on the page. The cause is
+measured rather than guessed: every site runs inside an `open_basedir` jail,
+which cost 72 ms of a 301 ms render when I removed it and put it back.
+CloudPanel sets no `open_basedir` and isolates tenants by Unix user alone. A
+panel that is faster on uncached renders and lets one compromised site read
+another's files is not a trade worth making, so the jail stays.
 
 Two processes, an unprivileged API and a root agent, talking over a typed RPC on
 a Unix socket. Commands are built as argv arrays, never shell strings. Released
