@@ -14,7 +14,7 @@ Based in Essex, England.
 
 ## AI in production
 
-Most of my code is now written with Claude Code and Codex: 2,241 of 2,937 commits
+Most of my code is now written with Claude Code and Codex, and 2,241 of 2,937 commits
 across 44 repositories carry a Claude co-author line, and Codex adds none. That
 makes code cheap to write, not cheap to be wrong, so the work is in what surrounds
 the model. The work for my employer lives in private repositories; the case
@@ -31,7 +31,7 @@ judge model runs in CI. Elixir, Phoenix, PostgreSQL.
 system synced with a live WooCommerce shop. Five tools let Claude search the
 catalogue and propose changes; the only write is a draft that a person approves.
 
-**Now: a business platform built by a governed team of agents.** Quoting, field
+**A business platform built by a governed team of agents, in progress.** Quoting, field
 service, purchasing, a double-entry ledger with VAT, HR and marketing email, in
 one Go application on one PostgreSQL database. A principal-engineer agent leads
 specialist agents; anything touching money, permissions, security or a migration
@@ -54,7 +54,7 @@ and isolated, and a deployment that makes a site slower is **refused** rather
 than shipped.
 
 Benchmarked against CloudPanel on the **same physical server**, one panel at a
-time, with the OS reinstalled in between and both tuned to their best:
+time, with the OS reinstalled in between and both tuned to their best.
 
 | | Slipstream | CloudPanel |
 | --- | --- | --- |
@@ -67,7 +67,7 @@ time, with the OS reinstalled in between and both tuned to their best:
 Measured 3 September 2026, Slipstream v0.2.0 against CloudPanel CE 2.5.4.
 That last row is the one it loses, by 2 times on the same machine and 4 times
 over a network, and it stays on the page. The cause is
-measured rather than guessed: every site runs inside an `open_basedir` jail,
+measured rather than guessed. Every site runs inside an `open_basedir` jail,
 which cost 72 ms of a 301 ms render when I removed it and put it back.
 CloudPanel sets no `open_basedir` and isolates tenants by Unix user alone. A
 panel that is faster on uncached renders and lets one compromised site read
@@ -88,7 +88,7 @@ platform does with a sidecar service, this does with a Postgres feature.
 
 Collections are **locked when you create them**. Every access rule starts as
 superuser only, and you open what should be public on purpose. Rules are checked
-on every read path: list, view, search, batch, file downloads and realtime
+on every read path, including list, view, search, batch, file downloads and realtime
 delivery. A rule enforced on four paths out of five is not enforced.
 
 ### [Windlass](https://github.com/Sulaiman-Dauda/windlass) · Go · Apache-2.0
@@ -98,7 +98,7 @@ replacing it with its own runtime. The project filesystem stays authoritative,
 so editing `compose.yaml` by hand and running `docker compose up -d` keeps
 working.
 
-The rule I care most about: **your containers keep running if Windlass stops or
+The rule I care most about is that **your containers keep running if Windlass stops or
 gets removed.** It is a control plane, not something your stack depends on to
 stay up. Privileged work is confined to one package, and a `depguard` lint rule
 enforces that boundary at build time rather than in code review.
@@ -109,7 +109,7 @@ enforces that boundary at build time rather than in code review.
 
 **Sportsafe UK.** Lead technical delivery on a national B2B commerce platform.
 **Eleven paid tools became code the business owns, about £3,000 a year in
-subscriptions** at list price: an in-house live chat and AI assistant in place of
+subscriptions** at list price, including an in-house live chat and AI assistant in place of
 LiveChat, an integration service built on the WooCommerce and CRM REST APIs in
 place of Zapier (134 of 134 web orders checked reached the CRM), and our own code in place of nine Pro plugins. The
 internal tools, including a quoting tool and a product and pricing system for
@@ -151,9 +151,9 @@ Administration**, University of Lagos.
 
 Nine years across web engineering and data. WordPress and PHP at depth, then Go,
 TypeScript, Elixir and Postgres, and since 2026 building with AI agents. Much
-of the work is APIs: integrating WooCommerce, a CRM, Google Ads, GA4, OpenAI,
+of the work is APIs, integrating WooCommerce, a CRM, Google Ads, GA4, OpenAI,
 Anthropic, Stripe and Microsoft Graph, and designing them, from an MCP server
-for AI agents to Gresbase's REST and realtime API. The data side is why the benchmarks exist: I am more
+for AI agents to Gresbase's REST and realtime API. The data side is why the benchmarks exist. I am more
 interested in what a change measurably did than in what it was meant to do.
 
 ---
