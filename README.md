@@ -4,8 +4,8 @@
 
 Customer-facing AI whose rules are enforced in code rather than in a prompt, MCP
 servers that propose changes for a person to approve, and evals that run in CI.
-Underneath that, self-hosted infrastructure in Go. Nine years shipping to
-production, an MSc in Applied Data Science, and a habit of not believing a change
+Underneath that, API integrations and self-hosted infrastructure in Go. Nine
+years shipping to production, an MSc in Applied Data Science, and a habit of not believing a change
 works until something has measured it.
 
 Based in Essex, England.
@@ -110,8 +110,8 @@ enforces that boundary at build time rather than in code review.
 **Sportsafe UK.** Lead technical delivery on a national B2B commerce platform.
 **Eleven paid tools became code the business owns, about £3,000 a year in
 subscriptions** at list price: an in-house live chat and AI assistant in place of
-LiveChat, an integration service in place of Zapier (134 of 134 web orders
-checked reached the CRM), and our own code in place of nine Pro plugins. The
+LiveChat, an integration service built on the WooCommerce and CRM REST APIs in
+place of Zapier (134 of 134 web orders checked reached the CRM), and our own code in place of nine Pro plugins. The
 internal tools, including a quoting tool and a product and pricing system for
 4,268 products, are self-hosted on Windlass. Time to first byte
 went from **983 ms to 288 ms** on a cache miss and 110 to 160 ms on a hit, and
@@ -150,7 +150,10 @@ next person than the successful ones.
 Administration**, University of Lagos.
 
 Nine years across web engineering and data. WordPress and PHP at depth, then Go,
-TypeScript, Elixir and Postgres, and since 2026 building with AI agents. The data side is why the benchmarks exist: I am more
+TypeScript, Elixir and Postgres, and since 2026 building with AI agents. Much
+of the work is APIs: integrating WooCommerce, a CRM, Google Ads, GA4, OpenAI,
+Anthropic, Stripe and Microsoft Graph, and designing them, from an MCP server
+for AI agents to Gresbase's REST and realtime API. The data side is why the benchmarks exist: I am more
 interested in what a change measurably did than in what it was meant to do.
 
 ---
