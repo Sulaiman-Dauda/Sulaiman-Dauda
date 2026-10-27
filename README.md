@@ -107,12 +107,12 @@ enforces that boundary at build time rather than in code review.
 
 ## Measured outcomes, not activity
 
-**Sportsafe UK.** Lead technical delivery on a national B2B commerce platform.
+**Current employer.** Lead technical delivery on a national B2B commerce platform.
 **Eleven paid tools became code the business owns, about £3,000 a year in
 subscriptions** at list price, including an in-house live chat and AI assistant in place of
 LiveChat, an integration service connecting the shop, forms, chat and booking to SugarCRM and Sugar Market through their REST APIs, in place of Zapier (134 of 134 web orders checked reached the CRM), and our own code in place of nine Pro plugins. The
-internal tools, including a quoting tool and a product and pricing system for
-4,268 products, are self-hosted on Windlass. Time to first byte
+internal tools include a quoting tool and a product and pricing system for
+4,268 products. Time to first byte
 went from **983 ms to 288 ms** on a cache miss and 110 to 160 ms on a hit, and
 reporting is reconciled against the order database to the penny every month.
 
